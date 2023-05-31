@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mick Trotter - Computing</title>
+    <link id="style" rel="stylesheet" href="css/index.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <!-- below required for github logos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- Navigation header -->
+    <header>
+        <div id="menu" class="header">
+            <ul>
+                <li><a href="index.html">Mick</a></li>
+                <li><a href="spatial.html">Spatial</a></li>
+                <li><a href="computing.html">Computing</a></li>
+                <li><a href="aviation.html">Aviation</a></li>
+                <li><a href="ago.html"><s>AGO</s></a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div id="content">
+        <!-- Heading -->
+        <h2 id="header">Intern</h2>
+
+        <div class="centrecontent">
+            <h3>Data Innovation and Analytics Directorate Logging Service</h3>
+
+            <div id="logging" class="subcentrecontent">
+                <img src="images/AGODIADLogos.PNG" alt="AGO/DIAD Logos">
+                <p>From February to June 2023, Michael completed an internship with the Australian Geospatial-Intelligence 
+                    Organisation (AGO)</p>
+                <p>During this time he designed and implemented a solution for the logging of AGO's Data Innovation and 
+                    Analytics Directorate (DIAD) tools and services.</p>
+                <p>He also developed a web app to display the logs in a user-friendly manner, and to allow users to 
+                    search the logs for specific events. A copy of this web app has been deployed with synthetic logs and is 
+                available here:</p>
+                <p><a href="https://michaeltrotterpersonal-streamlit-app-kgma8t.streamlit.app/" target="_blank"><b>DIAD Log Jam Web Applicaiton</b></a></p>
+                
+                <p>This work is discussed below, or alternatively you can watch this short video presentation.</p>
+            </div>
+            <iframe class="exclude" width="100%" height="400" src="https://www.youtube.com/embed/E7CiJXFJFKU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="clear"></div>
+            
+        </div>
+
+        <div class="centrecontent">
+            <h4>Project Background</h4>
+
+            <div class="subcentrecontent">
+                <p>AGO is one of ten agencies that comprise the National Intelligence Community (NIC), and one of two within the Australian Department of Defence. AGO is the lead in providing geospatial intelligence to Defence and the NIC.</p> 
+                <p>AGO's DIAD is tasked with providing support to analytical teams through the development of technical solutions and methodologies, automating work processes, and aiding in the analysis of geospatial data and imagery. Typically, this is in the form of geoprocessing toolboxes, python packages, python tools, and other machine analytics such as computer vision models and microservices.</p>
+                <p>This internship project was for the development of a logging solution for DIAD tools and services. The intended outcome was to provide DIAD and senior decision makers in AGO with better business intelligence and improve support to DIAD customers through real-time monitoring of tools.</p>
+                <p><b>Better business intelligence</b><br>Through the capture of information relating to end-user demographics as well as patterns (or absence) of tool usage, the DIAD and AGO executive are able to make informed decisions in the allocation of human, financial, and physical resources. Moving forward, this will improve the prioritisation of DIAD tasking and ensure that the tools being developed are delivering value to the organisation. Ultimately this will assist AGO in meeting its strategic objectives through the alignment of DIAD work with identified priorities. </p>
+                <p><b>Improved user support</b><br>With the addition of logging, shortcomings in the design of DIAD tools are now able to be identified in real-time through the capture of unhandled or common errors, runtime information, resource usage, and user tool interactions. This will improve user experience outcomes through timely support and continuous deployment, as well as ongoing user-driven optimisation and improvements to tools. This significantly reduces the burden on users to document and report many commonly identified issues, passively improving user experience outcomes. </p>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="centrecontent">
+            <h4>Logging Service Overview</h4>
+
+            <div class="subcentrecontent">
+                <img src="images/logging_overview.PNG" alt="Logging overview diagram">
+                <p>This project included the development of a Python logging package, the coordination of infrastructure provisioning, the development of supporting analytics, and creation of documentation for technical and non-technical users. </p>
+                <p>Logs are constructed and written to corporate storage using the developed ago-logging Python package which is integrated into tools and services. Analytics are delivered via a hosted Streamlit app that is accessed via browser. The Streamlit app allows users to query logs, receive alerts, and view analytics.</p>
+                <p>Technical and non-technical documentation for both the ago-logging package and the Streamlit app are hosted in various corporate systems such as Gitlab and Confluence. </p>
+                <p>The package has been included in developer project templates making the logging of future tools largely passive. As logs accumulate over time, the value of the analytics that utilise them will grow. </p>
+                <p>The developed Streamlit dashboard and analytics are highly extensible and able to adapt to changing organizational requirements. </p>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="centrecontent">
+            <h4>ago-logging Python Package</h4>
+
+            <div class="subcentrecontent">
+                <img src="images/logging_code.PNG" alt="Logging code example">
+                <p>In order to capture the required tool and user information, construct the logs, and send them to server-hosted storage, an ago-logging Python package was developed. </p>
+                <p>This package builds upon the Python Standard Library logging module distributed with Python. It abstracts some of the DIAD business logic, reducing the burden on DIAD developers to integrate logging with their tools and capture the required information at runtime. </p>
+                <p>The ago-logging package is hosted in a DIAD Gitlab space. CI/CD pipelines were established to automatically build, test, and deploy ago-logging to a Sonatype Nexus repository manager from where it can be pip installed by developers and end-users. </p>
+                <p>Included in ago-logging is a log_decorator function. This is intended to be the primary way developers integrate logging into their Python tools and services. The minimal usage shown below is sufficient to capture the majority of required information on tool usage, user details, runtime, etc. The decorator also accepts keyword arguments allowing developers to redirect log destinations, set logging levels and custom messages. </p>
+                <p>The log_decorator instantiates an AGOLogger() class which is also available to developers and offers finer control over logging. As well as capturing many of the details available through the decorator, the functionality of the Python Standard Library logging module is available, including logging at default or custom levels.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="centrecontent">
+            <h4>Analytics</h4>
+
+            <div class="subcentrecontent">
+                <img src="images/logjam.PNG" alt="Log Jam dashboard">
+                <p>Shown here is the Log Jam web app developed with Streamlit, an open-source Python library.</p>
+                <p>Log Jam provides the functionality for filtering and visualising log records. The initial deployment of Log Jam includes a stacked bar chart with user and tool breakdown, a date-usage trendline, and an hour of the week usage heatmap. </p>
+                <p>Development of analytics is done using common Python packages such as pandas, matplotlib, and seaborn, making the dashboard readily customisable. Future work will include user authentication, allowing for user-specific customisation of analytics.</p>
+                <p><a href="https://michaeltrotterpersonal-streamlit-app-kgma8t.streamlit.app/" target="_blank">DIAD Log Jam Web Applicaiton</a></p>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
