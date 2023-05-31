@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mick Trotter</title>
+    <link id="style" rel="stylesheet" href="css/index.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <!-- The external script that gets the map and replaces the text in the mapimage div with it -->
+    <script async defer src="JS/betterskimaps.js"></script>
+    <script async defer src="JS/changecss.js"></script>
+</head>
+
+<body>
+    <!-- Navigation header -->
+    <header>
+        <div id="menu" class="header">
+            <ul>
+                <li><a href="index.html">Mick</a></li>
+                <li><a href="spatial.html">Spatial</a></li>
+                <li><a href="computing.html">Computing</a></li>
+                <li><a href="aviation.html">Aviation</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="miscellania.html">Miscellania</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div id="content">
+        <div id="maparea">
+            <!-- The image map for selecting the resort. When a resort is selected a map is fetched by betterskimaps.js and placed in the mapimage div -->
+            <div id="mapmenu">
+                <img src="images/resorts.png" usemap="#ResortsMap" alt="Australian ski resorts">
+                <map name="ResortsMap">
+                    <area alt="Example map" title="Example map" onclick="handlers.getMap('offseason')" href="#"
+                        coords="12,15,168,38" shape="rect">
+                    <area alt="Perisher" title="Perisher" onclick="handlers.getMap('perisher')" href="#"
+                        coords="216,101,359,158" shape="rect">
+                    <area alt="Thredbo" title="Thredbo" onclick="handlers.getMap('thredbo')" href="#"
+                        coords="64,278,153,348" shape="rect">
+                    <area alt="Falls Creek" title="Falls Creek" onclick="handlers.getMap('falls')" href="#"
+                        coords="129,522,214,590" shape="rect">
+                    <area alt="Mt. Hotham" title="Mt. Hotham" onclick="handlers.getMap('hotham')" href="#"
+                        coords="101,692,244,721" shape="rect">
+                    <area alt="Mt. Buller" title="Mt. Buller" onclick="handlers.getMap('buller')" href="#"
+                        coords="63,816,213,869" shape="rect">
+                </map>
+            </div>
+
+            <!-- Text content explaining the webapp -->
+            <div id="textcontent">
+                <h2>Better Ski Area Maps</h2>
+                <p>
+                    Have you ever gone to a ski resort you weren't familiar with and sat staring at the list of lift
+                    statuses and the trail map side-by-side trying to figure out which areas were open and which
+                    weren't?
+                    <br>
+                    <br>
+                    When Mick moved to Canberra in 2017 he found himself frustrated that Perisher didn't display their
+                    lift
+                    status reports on top of their trail map, so he wrote a Python script to take care of that.
+                    The web app scrapes the <a
+                        href="https://www.perisher.com.au/reports-cams/reports/lift-report">Perisher lift status
+                        page</a> and colour-codes each status onto <a
+                        href="https://www.perisher.com.au/images/trailmaps/2022/17175_PSR_FA_WebsiteTrailMaps_Apr22_Perisher.jpg">their
+                        trail map.</a>
+                    <br>
+
+                    <a href=" https://github.com/MichaelTrotterPersonal/LiftStatusMaps"><i class="fa fa-github"
+                            style="font-size:36px"></i>Lift Status Web App</a>
+                </p>
+            </div>
+
+            <!-- Prompt to select a map - betterskimaps.js relpaces this text with the returned map -->
+            <div id="mapimage">
+                <h3>Select a resort on the left to see the live lift status, or select 'Show an example map' if it's
+                    summer</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <ul>
+                <li>
+                    <a id="badcss" href="#" onclick="changeCss();">BadCSS</a>
+                </li>
+            </ul>
+            <ul>
+                <li><a href="images/w3c/betterskimaps.PNG">w3c validation</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

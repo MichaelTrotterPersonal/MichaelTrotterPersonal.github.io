@@ -1,0 +1,423 @@
+/*------------ Generic header/footer/text css ------------*/
+
+/* -- Header -- */
+#menu {
+    /* Menu header is always at top, always on top, hides anything behind */
+    font-size: 20px;
+    background-color: white;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: 2px solid black;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    height: 3vh;
+    text-align: center;
+    min-width: 1000px;
+}
+
+#menu a {
+    text-decoration: none;
+    font-family: andale mono, monospace;
+    color: rgb(0, 0, 0);
+}
+
+#menu li {
+    display: inline;
+    padding: 30px;
+    background-color: white;
+}
+
+/* -- Footer -- */
+.footer {
+    font-size: 20px;
+    text-align: right;
+    background-color: white;
+    overflow: hidden;
+    border-top: 2px solid black;
+    position: static;
+    bottom: 0;
+    width: 100%;
+    margin-top: 100px;
+    height: 2vh;
+}
+
+.footer a {
+    text-decoration: none;
+    font-family: andale mono, monospace;
+    color: black;
+}
+
+.footer li,
+ul {
+    display: inline;
+    padding: 10px;
+    background-color: white;
+}
+
+#badcss {
+    cursor: e-resize;
+    font-family: andale mono, monospace;
+    color: rgb(159, 253, 159);
+}
+
+/* -- Text -- */
+
+h2,
+h3,
+h4,
+h5,
+p,
+#menu,
+#sitemap a {
+    font-family: andale mono, monospace;
+}
+
+#textcontent {
+    max-width: 80%;
+}
+
+#header {
+    padding-bottom: 20px;
+    margin: auto;
+    width: 40%;
+}
+
+#righttext {
+    text-align: right;
+}
+
+#content {
+    padding-top: 70px;
+    padding-left: 20px;
+    min-height: 90vh;
+}
+
+.clear {
+    clear: left;
+}
+
+/* ----------- MICK/INDEX CSS ------------ */
+.mecontainer {
+    position: relative;
+    margin: auto;
+    width: 40%;
+    text-align: center;
+}
+
+.mecontainer img {
+    max-width: 100%;
+    height: auto;
+    /* Fade for the image to make overlaid text more readable */
+    -webkit-mask-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.0) 0%, rgba(0, 0, 0, 1) 60%);
+}
+
+.top-left {
+    position: absolute;
+    top: 5%;
+    left: 5px;
+    text-align: left;
+}
+
+#socials {
+    margin: auto;
+    width: 40%;
+}
+
+
+/* ------------ CENTRED CONTENT CSS ------------ */
+.centrecontent img,
+video,
+iframe {
+    padding-right: 20px;
+    width: 350px;
+    float: left;
+}
+
+.centrecontent {
+    margin: auto;
+    width: 40%;
+    border-top: 1px solid black;
+    padding-bottom: 20px;
+}
+
+.subcentrecontent {
+    padding-top: 10px;
+}
+
+/* ------------ SPATIAL CSS ------------ */
+#map {
+    height: 400px;
+    margin: auto;
+}
+
+/* ------------ AVIATION CSS ------------ */
+#strava iframe {
+    border: 0;
+    scroll-behavior: smooth;
+}
+
+/* ------------ IMAGE GALLERY CSS ------------ */
+/* Construct a row of 7 images, the ones at the ends being the scroll buttons */
+/* Style images so that they space evenly across the row despite sizing differences  */
+#barImages {
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+
+.imgcolumn,
+.column {
+    float: left;
+    width: 15%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style the images and scroll buttons */
+.column img,
+.imgcolumn img {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.column img {
+    width: 30px;
+}
+
+.imgcolumn img {
+    max-width: 100%;
+    max-height: 150px;
+}
+
+.imgcolumn img:hover,
+.column img:hover {
+    opacity: 1;
+}
+
+/* Remove the float after the scroll bar images */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the main image and constrain size to fit */
+.mainImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.mainImage img {
+    max-height: 800px;
+}
+
+#imgtext {
+    font-family: andale mono, monospace;
+    color: black;
+    padding-left: 50px;
+}
+
+/* ------------ CONTACT CSS ------------ */
+/* Colour and border for input fields */
+input,
+textarea {
+    background-color: rgb(245, 247, 250);
+    border: 0px solid black;
+}
+
+/* Highlight field when selected */
+input:focus {
+    border: 1px solid black;
+}
+
+/* Colour for submit button */
+#submit {
+    background-color: rgb(50, 63, 75);
+    color: white;
+}
+
+/* Position contact form and text*/
+.contactform {
+    display: block;
+    text-align: center;
+    font-family: andale mono, monospace;
+}
+
+form {
+    display: inline-block;
+    text-align: left;
+}
+
+.inelem {
+    padding-bottom: 20px;
+}
+
+/* Format size of two input fields and submit button */
+.subject {
+    height: 30px;
+    padding-left: 10px;
+}
+
+.message {
+    height: 300px;
+    width: 590px;
+    padding-left: 10px;
+    resize: vertical;
+}
+
+.send {
+    height: 30px;
+    width: 60px;
+    cursor: pointer;
+}
+
+
+/* ------------ MISCELLANIA CSS ------------ */
+
+/* Sitemap list */
+#sitemap ul {
+    counter-reset: index;
+    max-width: 300px;
+    padding-right: 0px;
+}
+
+#sitemap li {
+    counter-increment: index;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+#sitemap li::before {
+    content: counters(index, ".", decimal-leading-zero);
+    font-size: 1rem;
+    min-width: 30px;
+}
+
+#sitemap {
+    padding-bottom: 20px;
+}
+/* Source log table */
+table {
+    background-color: rgba(255, 255, 255, 0.2);
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    font-family: andale mono, monospace;
+}
+
+th,
+td,
+caption {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: black
+}
+
+tr:hover {
+    background-color: rgb(226, 225, 225);
+}
+
+tr:first-child:hover {
+    background-color: white;
+}
+
+caption {
+    font-size: 20px;
+}
+
+/* Resume embed */
+#resume {
+    height: 75vh;
+    width: 75vw;
+    margin: auto;
+}
+
+.resumecontainer {
+    display: flex;
+    justify-content: center;
+}
+
+/* ------------ ABOUT CSS ------------ */
+
+#aboutimg img {
+    width: 100%;
+    display: block;
+    margin-top: 20px;
+    border: 1px solid black;
+}
+#aboutimg {
+    width: 40%;
+    margin: auto;
+}
+
+/* ------------ BETTER SKI MAPS CSS ------------ */
+#mapmenu img {
+    float: left;
+    padding-right: 20px;
+
+}
+
+#maparea {
+    height: 1000px;
+    width: 2100px;
+}
+
+#mapimage img {
+    max-height: 790px;
+}
+
+/* ------------ X-Wind and Daylight Calculator ------------  */
+
+#runwayplot {
+    float: left;
+}
+
+#plotsright {
+    position: relative;
+    left: 20px;
+}
+
+.plotinputs {
+    margin-bottom: 5px;
+}
+
+.inline {
+    display:inline;
+}
+
+#plotsright h3, #plotsright p { 
+    margin:0;
+    padding:0;
+}
+
+#plotsright p {
+    display: inline;
+}
+canvas {
+    border: 1px solid black;
+  }
+
+#plotsright input[type=number] {
+    border: 1px solid black;
+}
+

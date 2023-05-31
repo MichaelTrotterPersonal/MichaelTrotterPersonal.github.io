@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mick Trotter - Computing</title>
+    <link id="style" rel="stylesheet" href="css/index.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <!-- below required for github logos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script async defer src="JS/changecss.js"></script>
+</head>
+
+<body>
+    <!-- Navigation header -->
+    <header>
+        <div id="menu" class="header">
+            <ul>
+                <li><a href="index.html">Mick</a></li>
+                <li><a href="spatial.html">Spatial</a></li>
+                <li><a href="computing.html"><s>Computing</s></a></li>
+                <li><a href="aviation.html">Aviation</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="miscellania.html">Miscellania</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div id="content">
+        <!-- Heading -->
+        <h2 id="header">Student</h2>
+
+        <!-- First centre content section - XWindJS -->
+        <div class="centrecontent">
+            <h4>Crosswind and Daylight Calculator</h4>
+
+            <div id="xwind" class="subcentrecontent">
+                <img src="images/gallery/windcalculator.PNG" alt="X-Wind Calculator">
+                <p><a href="xwind.html">This crosswind and daylight flying times calculator</a> was created for my
+                    'something original' part of COMP6780 Assignment 3.</p>
+                <p>The calculator is implemented entirely in JavaScript and performs two functions: providing the user
+                    with earliest/latest daylight flying times, and doing runway selection and crosswind calculations.
+                </p>
+                <p>On loading, it will prompt to use your location. It uses this to form a GET request which it sends to
+                    a <a href="https://sunrise-sunset.org/api">sunrise/sunset API</a>. It then parses the results for
+                    start/end of civil twilight at your location,
+                    converts from UTC to local time, and reports these as the first/last light. These times are of
+                    significance as they mark the start/end of daytime visual flight rules based on CASA regulations.
+                </p>
+                <p>It also accepts user inputs for runways, wind direction, and wind speed. As these are provided it
+                    plots the inputs, selects the best runway with the minimum cross-wind, and calculates the crosswind
+                    and headwind components.
+                </p>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+
+
+        <!-- Second centre content section - Better ski maps -->
+        <div class="centrecontent">
+            <h4>Better Ski Maps</h4>
+
+            <div class="subcentrecontent">
+                <img src="images/perisherexample.jpg" alt="Example lift status map, Perisher">
+                <p>Have you ever gone to a ski resort you weren't familiar with and sat staring at the list of lift
+                    statuses and the trail map side-by-side trying to figure out which areas were open and which
+                    weren't?</p>
+                <p>When Mick moved to Canberra in 2017 he found himself frustrated that Perisher didn't display their
+                    lift status reports on top of their trail map, so he wrote a Python script to solve that problem and
+                    has now deployed it as a web app.</p>
+                <p>The app scrapes the <a href="https://www.perisher.com.au/reports-cams/reports/lift-report">Perisher
+                        lift status page</a> and colour-codes each status onto <a
+                        href="https://www.perisher.com.au/images/trailmaps/2022/17175_PSR_FA_WebsiteTrailMaps_Apr22_Perisher.jpg">their
+                        trail map.</a>
+                    Try it out here: <a href="betterskimaps.html">Better Lift Status Maps</a></p>
+                <p>You can view the code for the webapp on Mick's github account:</p>
+                <p><a href=" https://github.com/MichaelTrotterPersonal/LiftStatusMaps"><i class="fa fa-github"
+                            style="font-size:36px"></i>Lift Status Web App</a></p>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <!-- Third centre content section - LiveATC -->
+        <div class="centrecontent">
+            <h4>Better LiveATC Access</h4>
+
+            <div class="subcentrecontent">
+                <img src="images/liveatc.PNG" alt="LiveATC logo">
+                <p><a href="https://www.liveatc.net/">LiveATC</a> is an online repository of Air Traffic Control and
+                    pilot radio broadcast recordings.</p>
+                <p>LiveATC is an incredible asset for anyone learning to fly or just interested in aviation. However, it
+                    is also full of large periods of silence.</p>
+                <p>In early 2022 Mick wrote a Python package called PyLiveATC that allows users to programmatically
+                    access LiveATC recordings, download them, and remove the silence from them to make for better
+                    listening.</p>
+                <p>You can view the code for the package on Mick's github account:</p>
+                <p><a href=" https://github.com/MichaelTrotterPersonal/PyLiveATC"><i class="fa fa-github"
+                            style="font-size:36px"></i>PyLiveATC</a></p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <ul>
+                <li>
+                    <a id="badcss" href="#" onclick="changeCss();">BadCSS</a>
+                </li>
+            </ul>
+            <ul>
+                <li><a href="images/w3c/computing.PNG">w3c validation</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

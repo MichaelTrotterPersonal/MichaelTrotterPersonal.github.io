@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mick Trotter - Contact</title>
+    <link id="style" rel="stylesheet" href="css/index.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <script async defer src="JS/changecss.js"></script>
+</head>
+
+<body>
+    <!-- Navigation header -->
+    <header>
+        <div id="menu" class="header">
+            <ul>
+                <li><a href="index.html">Mick</a></li>
+                <li><a href="spatial.html">Spatial</a></li>
+                <li><a href="computing.html">Computing</a></li>
+                <li><a href="aviation.html">Aviation</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html"><s>Contact</s></a></li>
+                <li><a href="miscellania.html">Miscellania</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div id="content">
+        <!-- Contact form for creating an email and sending with user's email server -->
+        <div class="contactform">
+            <form enctype="text/plain" action="mailto:u7134416@anu.edu.au">
+                <!-- Subject input -->
+                <div class="inelem">
+                    Subject
+                    <br>
+                    <input class="subject" type="text" name="subject" placeholder="Subject" size="80">
+                </div>
+                <!-- Body input -->
+                <div class="inelem">
+                    Message
+                    <br>
+                    <textarea class="message" name="body" wrap="soft" maxlength="800" placeholder="Message"></textarea>
+                </div>
+                <!-- Submit button -->
+                <div class="inelem">
+                    <input class="send" id="submit" type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <ul>
+                <li>
+                    <a id="badcss" href="#" onclick="changeCss();">BadCSS</a>
+                </li>
+            </ul>
+            <ul>
+                <li><a href="images/w3c/contact.PNG">w3c validation</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Mick Trotter - Spatial</title>
+  <link id="style" rel="stylesheet" href="css/index.css">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <!-- The external scripts that handle the embedded google map for UAV survey locations -->
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAettdTyvhEGLEdpwi9lTJWNFAJ8oIO0k4&callback=initMap"></script>
+  <script async defer src="JS/uavsurveymap.js"></script>
+  <script async defer src="JS/changecss.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <div id="menu" class="header">
+      <ul>
+        <li><a href="index.html">Mick</a></li>
+        <li><a href="spatial.html"><s>Spatial</s></a></li>
+        <li><a href="computing.html">Computing</a></li>
+        <li><a href="aviation.html">Aviation</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="miscellania.html">Miscellania</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div id="content">
+    <!-- Heading -->
+    <h2 id="header">Analyst</h2>
+
+    <!-- First centre content section - UAV snow depth measurement -->
+    <div class="centrecontent">
+      <h4>UAV Snow Depth Measurement</h4>
+      <div class="subcentrecontent">
+        <img src="images/gallery/eBee_winter.png" alt="eBee, Mt. Hotham">
+        <p>In 2016 Mick completed a masters study into the use of small UAVs in the measurement of micro-scale
+          variations in snow depth.</p>
+        <p>Over 6 months of field work, 5 flights were undertaken including two proof-of-concept flights at parklands
+          in Melbourne,
+          a late-autum, mid-winter, and early spring flights at Mt. Hotham. </p>
+        <p>This work required the consultation and negotiated approval of the Mt.Hotham Resort Management Board and
+          Hotham Ski Lift Company.
+          As well as the safe operation alongside other airspace users including the Mt.Hotham-Falls Creek Heli-link.
+        </p>
+      </div>
+      <div class="clear"></div>
+
+      <div class="subcentrecontent">
+        <img src="images/gallery/HothamWinter.PNG" alt="Winter snow depth, Mt. Hotham">
+        <p>The succes of this project validated the use of small UAVs and photogrammetric modelling in the measurement
+          of snow depth in the Australian alpine environment. </p>
+        <p>The RMS error of 0.07m that was measured during these trials was found to be sufficient for this technique
+          to have commercial applications in winter ski area management.</p>
+      </div>
+      <div class="clear"></div>
+    </div>
+
+    <!-- First centre content section - laser scanning & aerial survey -->
+    <div class="centrecontent">
+
+      <h4>Terrestrial scanning and aerial survey</h4>
+      <div class="subcentrecontent">
+        <img src="images/gallery/dights_mill_2017.png" alt="eBee, Mt. Hotham">
+        <p>From 2016 to 2017 Mick was involved in heritage documentation projects capturing significant sights in
+          Victroia with Trimble and Faro laser scanners and eBee UAVs. </p>
+        <p>These sights included Cheviot Railway Tunnel, now a part of the Great Victorian Rail Trail, in central
+          Victoria; the Jacka Boulevard Vaults on the St Kilda Esplenade, Melbourne;
+          and Dights Mill in Abbotsford, Melbourne. </p>
+      </div>
+      <div class="clear"></div>
+
+      <div class="subcentrecontent">
+        <img src="images/gallery/jacka_scan.png" alt="Winter snow depth, Mt. Hotham">
+        <p>In addition to heritage documentation, Mick has undertaken more than a dozen terrestrial laser scans for
+          engineering and environmental customers. As well as UAV surveys for mining,
+          agriculture, ski area management, water management, and major infrastructure projects. </p>
+        <p>From 2016 to 2017 while working for UPG Solutions Mick was the primary point of support and expertise for
+          senseFly (now AgEagle) eBee survey UAVs for Australia and New Zealand.</p>
+      </div>
+      <div class="clear"></div>
+
+      <div class="subcentrecontent">
+        <h5>Mick's UAV survey sites in Australia and New Zealand</h5>
+        <div id="map"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer">
+      <ul>
+        <li>
+          <a id="badcss" href="#" onclick="changeCss();">BadCSS</a>
+        </li>
+      </ul>
+      <ul>
+        <li><a href="images/w3c/spatial.PNG">w3c validation</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+
+</html>

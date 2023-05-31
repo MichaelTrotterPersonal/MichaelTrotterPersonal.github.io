@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Aviation Calculator</title>
+    <link id="style" rel="stylesheet" href="css/index.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <script async defer src="JS/changecss.js"></script>
+    <script async defer src="JS/xwind.js"></script>
+</head>
+
+<body onload="start()">
+
+    <!-- Navigation header -->
+    <header>
+        <div id="menu" class="header">
+            <ul>
+                <li><a href="index.html">Mick</a></li>
+                <li><a href="spatial.html">Spatial</a></li>
+                <li><a href="computing.html">Computing</a></li>
+                <li><a href="aviation.html">Aviation</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="miscellania.html">Miscellania</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+    <div id="content">
+
+        <h2>X-Wind and Daylight Calculator</h2>
+
+        <h3 style="margin:0">Runways Plot</h3>
+        <div id="plots">
+            <canvas id="runwayplot" width="500" height="500"></canvas>
+
+            <div id="plotsright">
+                <h3>Wind Plot</h3>
+                <canvas id="windplot" width="200" height="200"></canvas>
+                <div id="rwayinput">
+                    <input class="plotinputs" type="number" id="runway" min="1" max="36">
+                    <button class="plotinputs" onclick="runwayPlot.addRunway()">Add runway (01 to 36)</button>
+                    <p id="rwayresponse"></p>
+                </div>
+                <div id="winddirinput">
+                    <input class="plotinputs" type="number" id="winddir" min="1" max="360">
+                    <button class="plotinputs" onclick="runwayPlot.setWindDir()">Set wind direction (degrees)</button>
+                    <p id="winddirresponse"></p>
+                </div>
+                <div id="windspdinput">
+                    <input class="plotinputs" type="number" id="windspd" min="1" max="200">
+                    <button class="plotinputs" onclick="runwayPlot.setWindSpeed()">Set wind speed</button>
+                    <p id="windspdresponse"></p>
+                </div>
+                <div>
+                    <button class="plotinputs" onclick="runwayPlot.clearRunways()">Clear runways</button>
+                </div>
+
+                <h3 id="winddirval">Wind direction (degrees) : </h3>
+                <h3 id="windspdval">Wind speed : </h3>
+                <h3 id="bestrunway">Best runway : </h3>
+                <h3 id="xwind">Crosswind component : </h3>
+                <h3 id="headwind">Headwind component : </h3>
+
+                <br>
+                <h3 id="fromtime">First light : </h3>
+                <h3 id="untiltime">Last light : </h3>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <ul>
+                <li><a href="images/w3c/xwind.PNG">w3c validation</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>
